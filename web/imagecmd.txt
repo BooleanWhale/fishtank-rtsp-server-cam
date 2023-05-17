@@ -1,0 +1,1 @@
+ffmpeg -y -i rtsp://localhost:8554/cam -rtsp_transport tcp -ss 1 -vframes 1 -strftime 1 "%F_%H_%M_%S".jpg

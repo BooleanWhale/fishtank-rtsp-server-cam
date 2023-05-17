@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="hls-0.13.0.light.min.js"></script>
+	</head>
+	<body>
+		<video id="video-player" autoplay muted controls></video>
+		<style>
+			body {
+				margin: 0;
+				background: black;
+				max-height: 100vw;
+			}
+			#video-player {
+				width: 100%;
+				max-height: 100vh;
+			}
+		</style>
+		<script>
+			const videoSource = 'master.m3u8';
+			const video = document.getElementById('video-player');
+			if(Hls.isSupported()) {
+				const hls = new Hls();
+				hls.on(Hls.Events.Error, function (event, data) {
+					console.log("HLS error: ", event, data);
+				});
+				hls.attachMedia(video);
+				hls.on(Hls.Events.MEDIA_ATTACHED, function() {
+					hls.loadSource(videoSource);
+					hls.on(Hls.Events.MANIFEST_PARSED,function() {
+						video.play();
+					});
+				});
+			}
+			else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+				video.src = videoSource;
+				video.addEventListener('loadedmetadata',function() {
+					video.play();
+				});
+			}
+		</script>
+	</body>
+ </html>
