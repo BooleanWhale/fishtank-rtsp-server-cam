@@ -3,7 +3,7 @@ body {
   margin: 0;
   background: black;
   color: white;
-  max-height: 100vw;
+  min-height: 100vh;
   font-family: sans-serif;
 }
 #video-player {
@@ -30,13 +30,29 @@ body {
 
 }
 
+.wee-slider__navdot.current-hour:after {
+  background: rgb(255 211 0);
+}
+
+.wee-slider__slide.current-hour span {
+  background: rgb(0 73 210);
+}
+
+.wee-slider__slide.current-hour ~ .wee-slider__slide span {
+  opacity: 0.5;
+}
+
+.wee-slider__slide.current-hour ~ .wee-slider__slide span:after {
+  content: ' - yesterday';
+}
+
 /* Pretty wave background~ */
 .waves-background {
   position: absolute;
   top: 0;
   z-index: -1;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #3586ff;
   overflow: hidden;
 }
