@@ -2,8 +2,5 @@
 
 Remote access fishtank webcam
 
-![Fishtank webcam](https://raw.githubusercontent.com/BooleanWhale/fishtank-rtsp-server-cam/main/screenshot.png)
+https://github.com/user-attachments/assets/3bc8c161-7540-4065-8346-4b2f0046e91c
 
-TODO:
-* Add automated snapshots with timeline on front-end
-* Add HTTP
