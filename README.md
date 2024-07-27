@@ -1,6 +1,6 @@
 # Fishtank RTSP Server & Camera System
 
-This project provides a real-time streaming solution for monitoring a fishtank via an RTSP stream, with a web interface featuring a video player and an hourly image carousel.
+This project provides a real-time streaming solution for monitoring a fishtank via an RTSP stream, with a web interface featuring a video player and an hourly image carousel. Recomended use with RaspberryPi and standard USB webcam.
 
 https://github.com/user-attachments/assets/3bc8c161-7540-4065-8346-4b2f0046e91c
 
